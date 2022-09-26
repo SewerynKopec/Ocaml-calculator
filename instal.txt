@@ -1,0 +1,25 @@
+# @0 Github auth:
+
+$ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+$ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+$ sudo apt update
+$ sudo apt install gh
+
+$ gh auth login
+
+# @1 Ocaml install:
+
+# environment setup: N   y
+$ opam init
+$ eval `opam env`
+
+# install a specific version of the OCaml base compiler
+$ opam switch create 4.11.1
+$ eval `opam env`
+
+# install dev tools, hit Enter to confirm at Y/n prompt
+$ opam install dune utop ocaml-lsp-server
+
+# @2 Usefull Aliases:
+$ alias CalcRestart="make clean; make;"
+$ alias StartCalc="./calc;"
