@@ -1,3 +1,3 @@
 # Ocaml-calculator
 
-Graphic console calculator created with Ocaml.
+Console calculator with graphing created with Ocaml.
